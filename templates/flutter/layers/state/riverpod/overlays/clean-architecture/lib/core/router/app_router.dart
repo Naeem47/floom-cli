@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../features/home/presentation/pages/home_page.dart';
+
+final routerProvider = Provider<GoRouter>((ref) {
+  return GoRouter(
+    initialLocation: HomePage.routeName,
+    routes: [
+      GoRoute(
+        path: HomePage.routeName,
+        builder: (context, state) => const HomePage(),
+      ),
+    ],
+    errorBuilder: (context, state) => Scaffold(
+      body: Center(child: Text(state.error.toString())),
+    ),
+  );
+});

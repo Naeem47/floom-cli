@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "firebase_analytics": "^11.3.6"
+  }
+}

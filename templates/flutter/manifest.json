@@ -1,0 +1,143 @@
+{
+  "version": 2,
+  "composeOrder": ["architecture", "state", "networking", "di"],
+  "foundationLayers": ["foundation/responsive"],
+  "layers": {
+    "architecture": {
+      "label": "Architecture",
+      "default": "clean-architecture",
+      "options": [
+        {
+          "id": "clean-architecture",
+          "label": "Clean Architecture",
+          "description": "Domain, data, and presentation layers per feature"
+        },
+        {
+          "id": "feature-first",
+          "label": "Feature First",
+          "description": "Self-contained feature folders with co-located logic"
+        },
+        {
+          "id": "mvc",
+          "label": "MVC",
+          "description": "Models, views, and controllers per feature"
+        },
+        {
+          "id": "minimal",
+          "label": "Minimal",
+          "description": "Lightweight starter with a single home screen"
+        }
+      ]
+    },
+    "state": {
+      "label": "State Management",
+      "default": "riverpod",
+      "options": [
+        {
+          "id": "riverpod",
+          "label": "Riverpod",
+          "description": "flutter_riverpod with providers"
+        },
+        {
+          "id": "bloc",
+          "label": "Bloc",
+          "description": "flutter_bloc with cubits"
+        },
+        {
+          "id": "provider",
+          "label": "Provider",
+          "description": "provider package with ChangeNotifier"
+        },
+        {
+          "id": "none",
+          "label": "None",
+          "description": "Plain Flutter widgets without a state library"
+        }
+      ]
+    },
+    "networking": {
+      "label": "Networking",
+      "default": "dio",
+      "options": [
+        {
+          "id": "dio",
+          "label": "Dio",
+          "description": "Dio HTTP client with a base ApiService"
+        },
+        {
+          "id": "http",
+          "label": "http",
+          "description": "Official http package with a base ApiService"
+        },
+        {
+          "id": "none",
+          "label": "None",
+          "description": "No networking layer scaffolded"
+        }
+      ]
+    },
+    "di": {
+      "label": "Dependency Injection",
+      "default": "none",
+      "options": [
+        {
+          "id": "none",
+          "label": "None",
+          "description": "Manual constructors or singletons"
+        },
+        {
+          "id": "get_it",
+          "label": "get_it",
+          "description": "Service locator with get_it"
+        },
+        {
+          "id": "injectable",
+          "label": "injectable",
+          "description": "Code-generated DI with injectable"
+        }
+      ]
+    }
+  },
+  "legacyTemplates": {
+    "clean-riverpod": {
+      "architecture": "clean-architecture",
+      "state": "riverpod",
+      "networking": "none",
+      "di": "none"
+    }
+  },
+  "addons": {
+    "firebase": {
+      "label": "Firebase",
+      "description": "Optional Firebase services — auth, Firestore, FCM, and config files",
+      "defaultServices": ["auth", "firestore", "messaging"],
+      "services": [
+        {
+          "id": "auth",
+          "label": "Authentication",
+          "description": "Email/password and OAuth via firebase_auth"
+        },
+        {
+          "id": "firestore",
+          "label": "Cloud Firestore",
+          "description": "NoSQL cloud database via cloud_firestore"
+        },
+        {
+          "id": "messaging",
+          "label": "Cloud Messaging (FCM)",
+          "description": "Push notifications via firebase_messaging"
+        },
+        {
+          "id": "storage",
+          "label": "Cloud Storage",
+          "description": "File uploads via firebase_storage"
+        },
+        {
+          "id": "analytics",
+          "label": "Analytics",
+          "description": "App analytics via firebase_analytics"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "floom-cli",
+  "version": "0.1.2",
+  "description": "Composable Flutter project scaffolder — architecture, Riverpod/Bloc/Provider, Dio/http, DI, ScreenUtil, and ApiState templates",
+  "main": "dist/cli.js",
+  "bin": {
+    "floom": "dist/cli.js"
+  },
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Naeem47/floom-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Naeem47/floom-cli/issues"
+  },
+  "homepage": "https://github.com/Naeem47/floom-cli#readme",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "flutter",
+    "cli",
+    "scaffold",
+    "generator",
+    "riverpod",
+    "bloc",
+    "provider",
+    "clean-architecture",
+    "mvc",
+    "dio",
+    "get-it",
+    "injectable",
+    "screenutil",
+    "template"
+  ],
+  "author": "Muhammad Naeem <https://github.com/Naeem47>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^5.4.1",
+    "@inquirer/prompts": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "CLI_GUIDE.md",
+    "LICENSE"
+  ]
+}

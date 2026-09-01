@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dio": "^5.7.0"
+  },
+  "devDependencies": {}
+}
